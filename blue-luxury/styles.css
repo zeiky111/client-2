@@ -313,10 +313,11 @@ textarea {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  padding: 24px 26px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  gap: 18px;
+  padding: 22px 22px;
   min-width: 0;
+  width: 100%;
 }
 
 .info-grid div {
@@ -334,12 +335,16 @@ textarea {
 }
 
 .info-grid a {
-  display: block;
+  display: inline-block;
+  max-width: 100%;
   font-weight: 600;
   color: var(--text);
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  white-space: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: clamp(0.7rem, 0.95vw, 0.92rem);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .stats-band {
@@ -640,7 +645,10 @@ textarea:focus {
   }
 
   .info-grid a {
-    font-size: 0.92rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .nav-wrap {
