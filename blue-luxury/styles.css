@@ -316,12 +316,14 @@ textarea {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   padding: 24px 26px;
+  min-width: 0;
 }
 
 .info-grid div {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
 }
 
 .info-grid span {
@@ -332,8 +334,12 @@ textarea {
 }
 
 .info-grid a {
+  display: block;
   font-weight: 600;
   color: var(--text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .stats-band {
@@ -626,6 +632,15 @@ textarea:focus {
 @media (max-width: 640px) {
   .container {
     width: min(100% - 18px, 100%);
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .info-grid a {
+    font-size: 0.92rem;
   }
 
   .nav-wrap {
