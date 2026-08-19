@@ -624,6 +624,40 @@ textarea:focus {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(100% - 18px, 100%);
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-text strong {
+    font-size: 0.9rem;
+  }
+
+  .brand-text small {
+    letter-spacing: 0.11em;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+
   .card-grid,
   .process-grid,
   .stats-grid,
@@ -631,8 +665,32 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding-top: 60px;
+  .stats-grid {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .feature-item {
+    display: block;
+  }
+
+  .icon {
+    margin-bottom: 12px;
+  }
+
+  .panel-card,
+  .contact-block,
+  .contact-card {
+    border-radius: 20px;
+  }
+
+  .spotlight,
+  .contact-card,
+  .contact-block,
+  .service-card,
+  .process-step {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .footer-wrap {
@@ -647,5 +705,9 @@ textarea:focus {
 
   .btn {
     width: 100%;
+  }
+
+  .site-footer {
+    padding-bottom: 28px;
   }
 }
